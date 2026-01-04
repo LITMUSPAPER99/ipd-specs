@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 import mediapipe as mp
+from mediapipe.python.solutions import face_mesh as mp_face_mesh
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from scipy.spatial import distance
@@ -36,7 +37,7 @@ IPD_MAX_MM = 80.0
 def detect_face_landmarks_and_iris(bgr_img):
     h, w = bgr_img.shape[:2]
     rgb_img = cv2.cvtColor(bgr_img, cv2.COLOR_BGR2RGB)
-    mp_face_mesh = mp.solutions.face_mesh
+    #--------mp_face_mesh = mp.solutions.face_mesh
     with mp_face_mesh.FaceMesh(
         static_image_mode=True,
         max_num_faces=1,
