@@ -3,5 +3,5 @@ uvicorn
 python-multipart
 numpy
 opencv-python-headless
-mediapipe==0.10.9
+mediapipe
 scipy
