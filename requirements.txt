@@ -3,6 +3,5 @@ uvicorn
 python-multipart
 numpy
 opencv-python-headless
-mediapipe
+mediapipe==0.10.9
 scipy
-matplotlib
